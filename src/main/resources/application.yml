@@ -1,0 +1,18 @@
+server:
+  port: 8094
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: ${rabbitmq.queue}
+        input:
+          destination: ${rabbitmq.queue}
+  rabbitmq:
+    host: 192.168.221.131
+    port: 5672
+    password: rabbit
+    username: rabbit
+rabbitmq:
+  queue: rabbitmq-queue
+
